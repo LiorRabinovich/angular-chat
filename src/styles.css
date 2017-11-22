@@ -1,0 +1,123 @@
+html,
+app-root {
+    height: 100%;
+    width: 100%;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+body {
+    background: #2d5f72;
+    margin: 0;
+    font-family: arial;
+    font-size: 16px;
+    height: 100%;
+    width: 100%;
+    direction: ltr;
+}
+
+#container {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#container-messages {
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    padding: 20px;
+    background: #eaf2f6;
+}
+
+#container-actions {
+    height: 60px;
+    padding: 10px 20px 0;
+    background: #fff;
+}
+
+#container-actions::after {
+    clear: both;
+    display: table;
+    content: " ";
+}
+
+#container-actions textarea {
+    width: calc(100% - 110px);
+    height: 40px;
+    float: left;
+    padding: 10px;
+    font-size: 16px;
+    font-family: arial;
+}
+
+#container-actions input[type="submit"] {
+    width: 100px;
+    border: 0;
+    margin-left: 10px;
+    float: right;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: #2d5f72;
+    cursor: pointer;
+}
+
+#container-actions input[type="submit"]:hover,
+#container-actions input[type="submit"]:focus {
+    opacity: 0.8;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message::after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.message-avatar {
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.message-content {
+    width: calc(100% - 70px);
+    float: right;
+    background: #fff;
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+}
+
+.message-content-username {
+    font-weight: bold;
+    display: block;
+}
+
+.message-content-text {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.message-content-time {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.message.my-message .message-content {
+    background: #7a9eae;
+    color: #fff;
+}
+
+.message.my-message .message-content-time {
+    color: #fff;
+}

@@ -1,0 +1,16 @@
+<div id="container">
+  <div id="container-messages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+    <div *ngFor="let message of messages;" class="message" [ngClass]="{'my-message':message.username==myMessage.username}">
+      <img class="message-avatar" [src]="message.avatar">
+      <div class="message-content">
+        <span class="message-content-username">{{message.username}}</span>
+        <p class="message-content-text">{{message.content}}</p>
+        <span class="message-content-time">{{message.date}}</span>
+      </div>
+    </div>
+  </div>
+  <div id="container-actions">
+    <textarea [(ngModel)]="myMessage.content" placeholder="Please enter text"></textarea>
+    <input type="submit" value="Send" (click)="sendMessage($event)">
+  </div>
+</div>
